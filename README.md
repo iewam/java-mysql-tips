@@ -11,15 +11,17 @@ Mysql存储emoji表情报错（Incorrect string value: '\xF0\x9F\x98\x82\xF0\x9F
 - 修改mysql的配置文件，windows下的为my.ini(linux下的为my.cnf)，修改的内容都一样
 
 ```
-[client]
-default-character-set = utf8mb4
 
-[mysql]
-default-character-set = utf8mb4
+    [client]
+    default-character-set = utf8mb4
 
-[mysqld]
-character-set-server = utf8mb4
-collation-server = utf8mb4_unicode_ci
+    [mysql]
+    default-character-set = utf8mb4
+
+    [mysqld]
+    character-set-server = utf8mb4
+    collation-server = utf8mb4_unicode_ci
+    
 ```
 
 - 将数据库中对应的字段，改为utf8mb4_general_ci
